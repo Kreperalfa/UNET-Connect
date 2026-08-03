@@ -1,24 +1,26 @@
 .layout {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--unet-gray);
 }
 
 .header {
-    background-color: var(--unet-blue-dark);
-    color: var(--unet-white);
-    padding: 1rem;
-    text-align: center;
+  background-color: var(--unet-blue-dark);
+  color: var(--unet-white);
+  padding: 1rem;
+  text-align: center;
 }
 
 .content {
-    flex: 1;
-    padding: 1rem;
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
 }
 
 .footer {
-    background-color: var(--unet-blue-light);
-    color: var(--unet-white);
-    text-align: center;
-    padding: 0.5rem;
+  background-color: var(--unet-blue-light);
+  color: var(--unet-white);
+  text-align: center;
+  padding: 0.5rem;
 }

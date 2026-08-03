@@ -1,0 +1,18 @@
+.unet-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;                  /* bordes suaves */
+  border: 2px solid #004080;           /* azul oscuro */
+  background-color: #004080;           /* caja azul */
+  color: #fff;                         /* texto blanco */
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.unet-btn:hover {
+  transform: translateY(-3px);         /* sobresale un poco */
+  color: #000;                         /* texto negro */
+  background-color: #3399ff;           /* azul claro */
+}
