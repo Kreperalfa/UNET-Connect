@@ -340,17 +340,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"UNETConnect@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "UNETConnect@workspace:."
-  dependencies:
-    "@supabase/supabase-js": "npm:^2.112.0"
-    next: "npm:15.1.6"
-    react: "npm:^19.2.8"
-    react-dom: "npm:^19.2.8"
-  languageName: unknown
-  linkType: soft
-
 "busboy@npm:1.6.0":
   version: 1.6.0
   resolution: "busboy@npm:1.6.0"
@@ -667,3 +656,14 @@ __metadata:
   checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
   languageName: node
   linkType: hard
+
+"unet-connect@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "unet-connect@workspace:."
+  dependencies:
+    "@supabase/supabase-js": "npm:^2.112.0"
+    next: "npm:15.1.6"
+    react: "npm:^19.2.8"
+    react-dom: "npm:^19.2.8"
+  languageName: unknown
+  linkType: soft
