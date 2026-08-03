@@ -1,25 +1,42 @@
-"use client";
-
-import { useEffect } from "react";
-import { supabase } from "../lib/supabaseClient";
+'use client';
+import { useEffect, useState } from 'react';
+import { supabase } from '../lib/supabaseClient';
+import Layout from '../components/Layout';   // ✅ Importa tu Layout
 
 export default function Home() {
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    const testConnection = async () => {
-      const { data, error } = await supabase
-        .from("User") // 👈 cambia "usuarios" por el nombre real de tu tabla
-        .select("*")
-        .limit(5);
-
+    const fetchUsers = async () => {
+      const { data, error } = await supabase.from('User').select('*');
       if (error) {
-        console.error("❌ Error en la conexión:", error.message);
+        console.error(error);
+        setUsers([]);
       } else {
-        console.log("✅ Conexión exitosa, datos recibidos:", data);
+        setUsers(data || []);
       }
+      setLoading(false);
     };
-
-    testConnection();
+    fetchUsers();
   }, []);
 
-  return <h1>Bienvenido a RedUNET</h1>;
+  return (
+    <Layout>
+      <h1>Usuarios registrados</h1>
+      {loading ? (
+        <p>Cargando...</p>
+      ) : users.length > 0 ? (
+        <ul>
+          {users.map(u => (
+            <li key={u.idUser}>
+              {u.name} {u.lastName} - {u.role}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No hay usuarios registrados</p>
+      )}
+    </Layout>
+  );
 }
