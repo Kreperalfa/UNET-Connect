@@ -1,0 +1,8 @@
+{
+  ".yarn\\__virtual__\\next-virtual-d6f56241aa\\5\\AppData\\Local\\Yarn\\Berry\\cache\\next-npm-16.2.12-6a164aa51f-10c0.zip\\node_modules\\next\\dist\\client\\dev\\hot-reloader\\app\\web-socket.js -> @vercel/turbopack-ecmascript-runtime/browser/dev/hmr-client/hmr-client.ts": {
+    "id": ".yarn\\__virtual__\\next-virtual-d6f56241aa\\5\\AppData\\Local\\Yarn\\Berry\\cache\\next-npm-16.2.12-6a164aa51f-10c0.zip\\node_modules\\next\\dist\\client\\dev\\hot-reloader\\app\\web-socket.js -> @vercel/turbopack-ecmascript-runtime/browser/dev/hmr-client/hmr-client.ts",
+    "files": [
+      "static/chunks/_app-pages-browser_yarn___virtual___next-virtual-d6f56241aa_5_AppData_Local_Yarn_Berry_cache_-df8c3d.js"
+    ]
+  }
+}
