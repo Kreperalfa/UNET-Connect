@@ -3,11 +3,13 @@
   margin: 2rem auto;
   padding: 2rem;
   background-color: #fff;
-  border: 2px solid #004080;   /* azul oscuro */
+  border: 2px solid #004080;
   border-radius: 10px;
   text-align: center;
+  box-sizing: border-box;
 }
 
+/* Texto */
 .welcome h2 {
   color: #004080;
   margin-bottom: 1rem;
@@ -19,19 +21,18 @@
   color: #333;
 }
 
+/* CONTENEDOR DE BOTONES */
 .actions {
   display: flex;
-  justify-content: center;
+  flex-direction: column;     /* 🔥 En móvil y desktop NO rompe */
   gap: 1rem;
+  width: 100%;                /* 🔥 Nunca más grande que el recuadro */
+  align-items: center;        /* 🔥 Centra los botones */
 }
 
-@media (max-width: 768px) {
-  .actions {
-    flex-direction: column;
-  }
-
-  .unet-btn {
-    width: 100%;
-    text-align: center;
-  }
+/* BOTONES DENTRO DEL CONTENEDOR */
+.actions .unet-btn {
+  width: 100%;                /* 🔥 Botón ocupa el ancho del recuadro */
+  max-width: 250px;           /* 🔥 No se hace gigante */
+  text-align: center;
 }

@@ -2,10 +2,18 @@
   "name": "unet-connect",
   "packageManager": "yarn@4.14.1",
   "dependencies": {
+    "@supabase/ssr": "^0.12.4",
     "@supabase/supabase-js": "^2.112.0",
+    "@zxing/library": "^0.23.0",
+    "formidable": "^3.5.4",
     "next": "^16.2.12",
+    "opencv.js": "^1.2.1",
+    "pixelmatch": "^7.2.0",
+    "pngjs": "^7.0.0",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "string-similarity": "^4.0.4",
+    "tesseract.js": "^7.0.0"
   },
   "scripts": {
     "dev": "next dev",
