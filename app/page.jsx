@@ -14,7 +14,7 @@ export default function Home() {
         </p>
 
         <div className="actions">
-          <Button href="/login">Sign In</Button>
+          <Button href="/log-in">Sign In</Button>
           <Button href="/register">Register</Button>
         </div>
       </div>

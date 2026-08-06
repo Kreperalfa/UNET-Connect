@@ -4,10 +4,12 @@ import SubmitButton from '../../components/SubmitButton';
 import SelectField from '../../components/SelectField';
 import SuccessAlert from '../../components/SuccessAlert';
 import ErrorAlert from '../../components/ErrorAlert';
-import { registerUser, verifyOtpCode } from '../../lib/auth';
+
+import { registerUser, verifyOtpCode, createUserPassword } from '../../lib/auth';
 import { createUserProfile } from '../../lib/profile';
 import { getSupabaseBrowserClient } from '../../lib/supabase';
 import { isSecurePassword } from '../../lib/validators';
+
 import '../../styles/Register.css';
 
 export default function Register() {
@@ -29,6 +31,7 @@ export default function Register() {
   async function handleSendCode(e) {
     e.preventDefault();
     const result = await registerUser(email);
+
     if (!result.ok) {
       setStatus(result.error);
     } else {
@@ -40,6 +43,7 @@ export default function Register() {
   async function handleVerifyCode(e) {
     e.preventDefault();
     const result = await verifyOtpCode(email, otp);
+
     if (!result.ok) {
       setStatus(result.error);
     } else {
@@ -77,16 +81,15 @@ export default function Register() {
     const perfilDefault = supabase.storage.from("perfiles").getPublicUrl("profile.png").data.publicUrl;
     const fondoDefault = supabase.storage.from("perfiles").getPublicUrl("background.jpg").data.publicUrl;
 
-    const { error: signUpError } = await supabase.auth.signUp({
-      email,
-      password,
-    });
+    // 🔥 PASO CRÍTICO: Guardar contraseña usando tu flujo oficial (createUserPassword)
+    const passwordResult = await createUserPassword(password);
 
-    if (signUpError) {
-      setStatus(`❌ Error creating user: ${signUpError.message}`);
+    if (!passwordResult.ok) {
+      setStatus("❌ Error saving password: " + passwordResult.error);
       return;
     }
 
+    // Crear perfil en tu tabla personalizada
     const result = await createUserProfile({
       emailVerified: email,
       name,
