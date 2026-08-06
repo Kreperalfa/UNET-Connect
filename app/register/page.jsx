@@ -106,7 +106,7 @@ export default function Register() {
       setStatus(result.error);
     } else {
       setStatus("✅ Profile created successfully");
-      // window.location.href = "/dashboard";
+      window.location.href = "/dashboard";
     }
   }
 

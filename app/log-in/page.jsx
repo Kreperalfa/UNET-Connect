@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import SubmitButton from '../../components/SubmitButton'; // ✅ usar este
 import '../../styles/Log-in.css';
-import { loginUser, sendOtpForPasswordChange } from '../../lib/auth';
+import { loginUser } from '../../lib/auth';
 import SuccessAlert from '../../components/SuccessAlert';
 import ErrorAlert from '../../components/ErrorAlert';
 
@@ -24,12 +24,8 @@ export default function LogIn() {
 
   async function handleForgotPassword(e) {
     e.preventDefault();
-    const result = await sendOtpForPasswordChange(email);
-    if (!result.ok) {
-      setStatus(result.error);
-    } else {
-      setStatus("✅ OTP sent to your email for password recovery");
-    }
+    // ✅ Simplemente redirige a la página de recuperación
+    window.location.href = "/recover-password";
   }
 
   return (
