@@ -1,0 +1,28 @@
+.select-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.select-field label {
+  font-weight: bold;
+  color: #004080;
+  font-size: 0.95rem;
+}
+
+.select-field select {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 2px solid #004080;
+  font-size: 1rem;
+  outline: none;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.select-field select:focus {
+  border-color: #3399ff;
+  background-color: #ffffff;
+  box-shadow: 0 0 6px rgba(0, 64, 128, 0.3);
+}

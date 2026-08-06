@@ -78,4 +78,29 @@
   background-color: #ffffff;
   box-shadow: 0 0 8px rgba(0, 64, 128, 0.3);
 }
+/* 🔥 Mejora visual de inputs y textarea */
+.register-form input[type="text"],
+.register-form input[type="number"],
+.register-form textarea {
+  padding: 0.9rem;
+  border-radius: 8px;
+  border: 2px solid #004080;
+  font-size: 1rem;
+  outline: none;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
 
+.register-form input[type="text"]:focus,
+.register-form input[type="number"]:focus,
+.register-form textarea:focus {
+  border-color: #3399ff;
+  background-color: #ffffff;
+  box-shadow: 0 0 6px rgba(0, 64, 128, 0.3);
+}
+
+/* 🎨 Ajuste para textarea */
+.register-form textarea {
+  min-height: 100px;
+  resize: vertical; /* permite ajustar altura pero no ancho */
+}
